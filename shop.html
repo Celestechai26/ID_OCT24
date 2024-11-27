@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport config">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Tutorial</title>
+    <title>Shop</title>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" 
     integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" 
@@ -13,9 +13,51 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+
+    <style>
+        .product img {
+            width: 100%;
+            height: auto;
+            box-sizing: border-box;
+            object-fit: cover;
+        }
+
+        .product img {
+            width: 100%; /* Ensures the image takes the full width of the container */
+            height: 250px; /* Sets a consistent height for all images */
+            object-fit: cover; /* Ensures the image covers the area without distortion */
+            border-radius: 5px; /* Optional: adds rounded corners for aesthetic */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for depth */
+        }
+
+        .product {
+            margin: 15px 0; /* Adjusts spacing between rows */
+            padding: 10px; /* Adds internal spacing for better visual appeal */
+        }
+
+        .product {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #featured>div.row.mx-auto.container>nav>ul>li.page-item.active>a {
+            background-color: black;
+        }
+
+        #featured>div.row.mx-auto.container>nav>ul>li:nth-child(n):hover>a {
+            background-color: coral;
+            color: #fff;
+        }
+
+        .pagination a {
+            color: #000;
+        }
+    </style>
 </head>
 <body>
-
+    
+    <!-- NAVIGATION -->
     <nav class="navbar navbar-expand-lg bg-white py-3 fixed-top">
         <div class="container">
           <img src="Fashion Pulse.png" alt="">
@@ -26,10 +68,10 @@
             <ul class="navbar-nav ml-auto">
               
               <li class="nav-item">
-                <a class="nav-link active" href="#">Home</a>
+                <a class="nav-link" href="index.html">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="shop.html">Shop</a>
+                <a class="nav-link active" href="#">Shop</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">Blog</a>
@@ -49,62 +91,181 @@
           </div>
         </div>
       </nav>
-    
-      <section id="home">
-        <div class="container">
-            <h5>NEW ARRIVALS</h5> 
-            <h1><span>Best Price</span> This Year</h1>
-            <p>Shoomatic offers your very comfortable time<br>on walking and exercises.</p>
-            <button>Shop Now</button>
-        </div>      
-      </section>
 
-      <section id="brand" class="container">
-        <div class="row m-0 py-5">
-            <img class="img-fluid col-lg-2 col-md-4 col-6" src="841322.gif" alt="">
-            <img class="img-fluid col-lg-2 col-md-4 col-6" src="images.png" alt="">
-            <img class="img-fluid col-lg-2 col-md-4 col-6" src="comedy-text-on-white-background-260nw-2367103883.jpg" alt="">
-            <img class="img-fluid col-lg-2 col-md-4 col-6" src="sls-letter-monogram-logo-design-260nw-2263245385.jpg" alt="">
-            <img class="img-fluid col-lg-2 col-md-4 col-6" src="0x0.png" alt="">
-            <img class="img-fluid col-lg-2 col-md-4 col-6" src="Logo.webp" alt="">
-        </div>
-      </section>
-
-      <section id="new" class="w-100">
-        <div class="row p-0 m-0">
-            <div class="one col-lg-4 col-md-12 col-12 p-0">
-                <img class="img-fluid" src="1-4--500x500.webp" alt="">
-                <div class="details">
-                    <h2>Extreme Rare Sneakers</h2>
-                    <button class="text-uppercase">Shop now</button>
-                </div>
-            </div>
-            <div class="one col-lg-4 col-md-12 col-12 p-0">
-                <img class="img-fluid" src="f40abf2517edab9673134c1336785601.jpg" alt="">
-                <div class="details">
-                    <h2>Awesome Outfit</h2>
-                    <button class="text-uppercase">Shop now</button>
-                </div>
-            </div>
-            <div class="one col-lg-4 col-md-12 col-12 p-0">
-                <img class="img-fluid" src="05mdSZkTkUuTm3yHEwBZog.png.transform.vacprodcardhd.avif" alt="">
-                <div class="details">
-                    <h2>Sportwear Up To 50% Off</h2>
-                    <button class="text-uppercase">Shop now</button>
-                </div>
-            </div>
-        </div>
-      </section>
-
-      <section id="featured" class="my-5 pb-5">
-        <div class="container text-center mt-5 py-5">
-            <h3>Our Featured</h3>
-            <hr class="mx-auto">
+      <section id="featured" class="my-5 py-5">
+        <div class="container mt-5 py-5">
+            <h2 class="font-weight-bold">Our Featured</h2>
+            <hr>
             <p>Here you can check out our new products with fair price on fashion pulse.</p>
         </div>
-        <div class="row mx-auto container-fluid">
+        <div class="row mx-auto container">
+            <div onclick="window.location.href='product.html';" class="product text-center col-lg-3 col-md-4 col-12">
+                <img class="img-fluid mb-3" src="shopping (8).webp" alt="">
+                <div class="star">
+                    <i class="material-icons">&#xe838;</i>
+                    <i class="material-icons">&#xe838;</i>
+                    <i class="material-icons">&#xe838;</i>
+                    <i class="material-icons">&#xe838;</i>
+                    <i class="material-icons">&#xe838;</i>
+                </div>
+                <h5 class="p-name">Sport Boots</h5>
+                <h4 class="p-price">$92.00</h4>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+
             <div class="product text-center col-lg-3 col-md-4 col-12">
-                <img class="img-fluid mb-3" src="51iA3ArORaS._AC_UY900_.jpg" alt="">
+                <img class="img-fluid mb-3" src="shopping (12).webp" alt="">
+                <div class="star">
+                    <i class="material-icons">&#xe838;</i>
+                    <i class="material-icons">&#xe838;</i>
+                    <i class="material-icons">&#xe838;</i>
+                    <i class="material-icons">&#xe838;</i>
+                    <i class="material-icons">&#xe838;</i>
+                </div>
+                <h5 class="p-name">Sport Boots</h5>
+                <h4 class="p-price">$92.00</h4>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+
+            <div class="product text-center col-lg-3 col-md-4 col-12">
+                <img class="img-fluid mb-3" src="shopping (5).webp" alt="">
+                <div class="star">
+                    <i class="material-icons">&#xe838;</i>
+                    <i class="material-icons">&#xe838;</i>
+                    <i class="material-icons">&#xe838;</i>
+                    <i class="material-icons">&#xe838;</i>
+                    <i class="material-icons">&#xe838;</i>
+                </div>
+                <h5 class="p-name">Sport Boots</h5>
+                <h4 class="p-price">$92.00</h4>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+
+            <div class="product text-center col-lg-3 col-md-4 col-12">
+                <img class="img-fluid mb-3" src="titan-1734km02.jpg" alt="">
+                <div class="star">
+                    <i class="material-icons">&#xe838;</i>
+                    <i class="material-icons">&#xe838;</i>
+                    <i class="material-icons">&#xe838;</i>
+                    <i class="material-icons">&#xe838;</i>
+                    <i class="material-icons">&#xe838;</i>
+                </div>
+                <h5 class="p-name">Sport Boots</h5> 
+                <h4 class="p-price">$92.00</h4>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+            <div class="product text-center col-lg-3 col-md-4 col-12">
+                <img class="img-fluid mb-3" src="shopping (7).webp" alt="">
+                <div class="star">
+                    <i class="material-icons">&#xe838;</i>
+                    <i class="material-icons">&#xe838;</i>
+                    <i class="material-icons">&#xe838;</i>
+                    <i class="material-icons">&#xe838;</i>
+                    <i class="material-icons">&#xe838;</i>
+                </div>
+                <h5 class="p-name">Sport Boots</h5>
+                <h4 class="p-price">$92.00</h4>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+
+            <div class="product text-center col-lg-3 col-md-4 col-12">
+                <img class="img-fluid mb-3" src="shopping (6).webp" alt="">
+                <div class="star">
+                    <i class="material-icons">&#xe838;</i>
+                    <i class="material-icons">&#xe838;</i>
+                    <i class="material-icons">&#xe838;</i>
+                    <i class="material-icons">&#xe838;</i>
+                    <i class="material-icons">&#xe838;</i>
+                </div>
+                <h5 class="p-name">Sport Boots</h5>
+                <h4 class="p-price">$92.00</h4>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+
+            <div class="product text-center col-lg-3 col-md-4 col-12">
+                <img class="img-fluid mb-3" src="shopping (10).webp" alt="">
+                <div class="star">
+                    <i class="material-icons">&#xe838;</i>
+                    <i class="material-icons">&#xe838;</i>
+                    <i class="material-icons">&#xe838;</i>
+                    <i class="material-icons">&#xe838;</i>
+                    <i class="material-icons">&#xe838;</i>
+                </div>
+                <h5 class="p-name">Sport Boots</h5>
+                <h4 class="p-price">$92.00</h4>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+
+            <div class="product text-center col-lg-3 col-md-4 col-12">
+                <img class="img-fluid mb-3" src="shopping.webp" alt="">
+                <div class="star">
+                    <i class="material-icons">&#xe838;</i>
+                    <i class="material-icons">&#xe838;</i>
+                    <i class="material-icons">&#xe838;</i>
+                    <i class="material-icons">&#xe838;</i>
+                    <i class="material-icons">&#xe838;</i>
+                </div>
+                <h5 class="p-name">Sport Boots</h5>
+                <h4 class="p-price">$92.00</h4>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+            <div class="product text-center col-lg-3 col-md-4 col-12">
+                <img class="img-fluid mb-3" src="-original-imagnvwumakwug6c.webp" alt="">
+                <div class="star">
+                    <i class="material-icons">&#xe838;</i>
+                    <i class="material-icons">&#xe838;</i>
+                    <i class="material-icons">&#xe838;</i>
+                    <i class="material-icons">&#xe838;</i>
+                    <i class="material-icons">&#xe838;</i>
+                </div>
+                <h5 class="p-name">Sport Boots</h5>
+                <h4 class="p-price">$92.00</h4>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+
+            <div class="product text-center col-lg-3 col-md-4 col-12">
+                <img class="img-fluid mb-3" src="shopping (13).webp" alt="">
+                <div class="star">
+                    <i class="material-icons">&#xe838;</i>
+                    <i class="material-icons">&#xe838;</i>
+                    <i class="material-icons">&#xe838;</i>
+                    <i class="material-icons">&#xe838;</i>
+                    <i class="material-icons">&#xe838;</i>
+                </div>
+                <h5 class="p-name">Sport Boots</h5>
+                <h4 class="p-price">$92.00</h4>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+
+            <div class="product text-center col-lg-3 col-md-4 col-12">
+                <img class="img-fluid mb-3" src="shopping (2).webp" alt="">
+                <div class="star">
+                    <i class="material-icons">&#xe838;</i>
+                    <i class="material-icons">&#xe838;</i>
+                    <i class="material-icons">&#xe838;</i>
+                    <i class="material-icons">&#xe838;</i>
+                    <i class="material-icons">&#xe838;</i>
+                </div>
+                <h5 class="p-name">Sport Boots</h5>
+                <h4 class="p-price">$92.00</h4>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+
+            <div class="product text-center col-lg-3 col-md-4 col-12">
+                <img class="img-fluid mb-3" src="shopping (3).webp" alt="">
+                <div class="star">
+                    <i class="material-icons">&#xe838;</i>
+                    <i class="material-icons">&#xe838;</i>
+                    <i class="material-icons">&#xe838;</i>
+                    <i class="material-icons">&#xe838;</i>
+                    <i class="material-icons">&#xe838;</i>
+                </div>
+                <h5 class="p-name">Sport Boots</h5>
+                <h4 class="p-price">$92.00</h4>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+            <div class="product text-center col-lg-3 col-md-4 col-12">
+                <img class="img-fluid mb-3" src="shopping (9).webp" alt="">
                 <div class="star">
                     <i class="material-icons">&#xe838;</i>
                     <i class="material-icons">&#xe838;</i>
@@ -146,38 +307,7 @@
             </div>
 
             <div class="product text-center col-lg-3 col-md-4 col-12">
-                <img class="img-fluid mb-3" src="51tJpMNuQ8L._SR240,220_.jpg" alt="">
-                <div class="star">
-                    <i class="material-icons">&#xe838;</i>
-                    <i class="material-icons">&#xe838;</i>
-                    <i class="material-icons">&#xe838;</i>
-                    <i class="material-icons">&#xe838;</i>
-                    <i class="material-icons">&#xe838;</i>
-                </div>
-                <h5 class="p-name">Sport Boots</h5>
-                <h4 class="p-price">$92.00</h4>
-                <button class="buy-btn">Buy Now</button>
-            </div>
-        </div>
-      </section>
-
-      <section id="banner" class="my-5 py-5">
-        <div class="container">
-            <h4>MID SEASON'S SALE</h4>
-            <h1>Autumn Collection<br>UP TO 20% OFF</h1>
-            <button class="text-uppercase">Shop Now</button>
-        </div>
-      </section>
-
-      <section id="clothes" class="my-5">
-        <div class="container text-center mt-5 py-5">
-            <h3>Dresses & Jumpsuits</h3>
-            <hr class="mx-auto">
-            <p>Here you can check out our new products with fair price on fashion pulse.</p>
-        </div>
-        <div class="row mx-auto container-fluid">
-            <div class="product text-center col-lg-3 col-md-4 col-12">
-                <img class="img-fluid mb-3" src="123b8c354ba4f81d2f2bba92ed701178.jpg" alt="">
+                <img class="img-fluid mb-3" src="shopping (1).webp" alt="">
                 <div class="star">
                     <i class="material-icons">&#xe838;</i>
                     <i class="material-icons">&#xe838;</i>
@@ -190,177 +320,22 @@
                 <button class="buy-btn">Buy Now</button>
             </div>
 
-            <div class="product text-center col-lg-3 col-md-4 col-12">
-                <img class="img-fluid mb-3" src="ea625920a05699e9199c78f9a1528b13.jpg" alt="">
-                <div class="star">
-                    <i class="material-icons">&#xe838;</i>
-                    <i class="material-icons">&#xe838;</i>
-                    <i class="material-icons">&#xe838;</i>
-                    <i class="material-icons">&#xe838;</i>
-                    <i class="material-icons">&#xe838;</i>
-                </div>
-                <h5 class="p-name">Sport Boots</h5>
-                <h4 class="p-price">$92.00</h4>
-                <button class="buy-btn">Buy Now</button>
-            </div>
-
-            <div class="product text-center col-lg-3 col-md-4 col-12">
-                <img class="img-fluid mb-3" src="f1fa8078855061fd48e56d5ee35bb199.jpg" alt="">
-                <div class="star">
-                    <i class="material-icons">&#xe838;</i>
-                    <i class="material-icons">&#xe838;</i>
-                    <i class="material-icons">&#xe838;</i>
-                    <i class="material-icons">&#xe838;</i>
-                    <i class="material-icons">&#xe838;</i>
-                </div>
-                <h5 class="p-name">Sport Boots</h5>
-                <h4 class="p-price">$92.00</h4>
-                <button class="buy-btn">Buy Now</button>
-            </div>
-
-            <div class="product text-center col-lg-3 col-md-4 col-12">
-                <img class="img-fluid mb-3" src="5d3d36dedcf5df15cea74e5228493637.jpg" alt="">
-                <div class="star">
-                    <i class="material-icons">&#xe838;</i>
-                    <i class="material-icons">&#xe838;</i>
-                    <i class="material-icons">&#xe838;</i>
-                    <i class="material-icons">&#xe838;</i>
-                    <i class="material-icons">&#xe838;</i>
-                </div>
-                <h5 class="p-name">Sport Boots</h5>
-                <h4 class="p-price">$92.00</h4>
-                <button class="buy-btn">Buy Now</button>
-            </div>
-        </div>
-      </section>
-
-      <section id="watches" class="my-5">
-        <div class="container text-center mt-5 py-5">
-            <h3>Best Watches</h3>
-            <hr class="mx-auto">
-            <p>Here you can check out our new products with fair price on fashion pulse.</p>
-        </div>
-        <div class="row mx-auto container-fluid">
-            <div class="product text-center col-lg-3 col-md-4 col-12">
-                <img class="img-fluid mb-3" src="I0Kj4FREuk-Byt2z4bCR5w.png.transform.vacprodcardhd.avif" alt="">
-                <div class="star">
-                    <i class="material-icons">&#xe838;</i>
-                    <i class="material-icons">&#xe838;</i>
-                    <i class="material-icons">&#xe838;</i>
-                    <i class="material-icons">&#xe838;</i>
-                    <i class="material-icons">&#xe838;</i>
-                </div>
-                <h5 class="p-name">Sport Boots</h5>
-                <h4 class="p-price">$92.00</h4>
-                <button class="buy-btn">Buy Now</button>
-            </div>
-
-            <div class="product text-center col-lg-3 col-md-4 col-12">
-                <img class="img-fluid mb-3" src="N4YrEbuGykm8aiqG-VmSQQ.png.transform.vacprodcardhd.avif" alt="">
-                <div class="star">
-                    <i class="material-icons">&#xe838;</i>
-                    <i class="material-icons">&#xe838;</i>
-                    <i class="material-icons">&#xe838;</i>
-                    <i class="material-icons">&#xe838;</i>
-                    <i class="material-icons">&#xe838;</i>
-                </div>
-                <h5 class="p-name">Sport Boots</h5>
-                <h4 class="p-price">$92.00</h4>
-                <button class="buy-btn">Buy Now</button>
-            </div>
-
-            <div class="product text-center col-lg-3 col-md-4 col-12">
-                <img class="img-fluid mb-3" src="Q35YanPqEkS6YPL4MYNMmA.png.transform.vacprodcardhd.avif" alt="">
-                <div class="star">
-                    <i class="material-icons">&#xe838;</i>
-                    <i class="material-icons">&#xe838;</i>
-                    <i class="material-icons">&#xe838;</i>
-                    <i class="material-icons">&#xe838;</i>
-                    <i class="material-icons">&#xe838;</i>
-                </div>
-                <h5 class="p-name">Sport Boots</h5>
-                <h4 class="p-price">$92.00</h4>
-                <button class="buy-btn">Buy Now</button>
-            </div>
-
-            <div class="product text-center col-lg-3 col-md-4 col-12">
-                <img class="img-fluid mb-3" src="QWmgnsytR1y6bBwvfujwwQ.png.transform.vacprodcardhd.avif" alt="">
-                <div class="star">
-                    <i class="material-icons">&#xe838;</i>
-                    <i class="material-icons">&#xe838;</i>
-                    <i class="material-icons">&#xe838;</i>
-                    <i class="material-icons">&#xe838;</i>
-                    <i class="material-icons">&#xe838;</i>
-                </div>
-                <h5 class="p-name">Sport Boots</h5>
-                <h4 class="p-price">$92.00</h4>
-                <button class="buy-btn">Buy Now</button>
-            </div>
-        </div>
-      </section>
-
-      <section id="shoes" class="my-5">
-        <div class="container text-center mt-5 py-5">
-            <h3>Running Shoes</h3>
-            <hr class="mx-auto">
-            <p>Here you can check out our new products with fair price on fashion pulse.</p>
-        </div>
-        <div class="row mx-auto container-fluid">
-            <div class="product text-center col-lg-3 col-md-4 col-12">
-                <img class="img-fluid mb-3" src="GREATS-Mens-Royale2.0-LightTaupe-02_WEB.webp" alt="">
-                <div class="star">
-                    <i class="material-icons">&#xe838;</i>
-                    <i class="material-icons">&#xe838;</i>
-                    <i class="material-icons">&#xe838;</i>
-                    <i class="material-icons">&#xe838;</i>
-                    <i class="material-icons">&#xe838;</i>
-                </div>
-                <h5 class="p-name">Sport Boots</h5>
-                <h4 class="p-price">$92.00</h4>
-                <button class="buy-btn">Buy Now</button>
-            </div>
-
-            <div class="product text-center col-lg-3 col-md-4 col-12">
-                <img class="img-fluid mb-3" src="51XFax8Kv3L._SY395_.jpg" alt="">
-                <div class="star">
-                    <i class="material-icons">&#xe838;</i>
-                    <i class="material-icons">&#xe838;</i>
-                    <i class="material-icons">&#xe838;</i>
-                    <i class="material-icons">&#xe838;</i>
-                    <i class="material-icons">&#xe838;</i>
-                </div>
-                <h5 class="p-name">Sport Boots</h5>
-                <h4 class="p-price">$92.00</h4>
-                <button class="buy-btn">Buy Now</button>
-            </div>
-
-            <div class="product text-center col-lg-3 col-md-4 col-12">
-                <img class="img-fluid mb-3" src="b9ef2e6316a67ab45ecebea3e7ec744b_600x293.webp" alt="">
-                <div class="star">
-                    <i class="material-icons">&#xe838;</i>
-                    <i class="material-icons">&#xe838;</i>
-                    <i class="material-icons">&#xe838;</i>
-                    <i class="material-icons">&#xe838;</i>
-                    <i class="material-icons">&#xe838;</i>
-                </div>
-                <h5 class="p-name">Sport Boots</h5>
-                <h4 class="p-price">$92.00</h4>
-                <button class="buy-btn">Buy Now</button>
-            </div>
-
-            <div class="product text-center col-lg-3 col-md-4 col-12">
-                <img class="img-fluid mb-3" src="Leather shoes.jpg" alt="">
-                <div class="star">
-                    <i class="material-icons">&#xe838;</i>
-                    <i class="material-icons">&#xe838;</i>
-                    <i class="material-icons">&#xe838;</i>
-                    <i class="material-icons">&#xe838;</i>
-                    <i class="material-icons">&#xe838;</i>
-                </div>
-                <h5 class="p-name">Sport Boots</h5>
-                <h4 class="p-price">$92.00</h4>
-                <button class="buy-btn">Buy Now</button>
-            </div>
+            <nav aria-label="...">
+                <ul class="pagination mt-5">
+                  <li class="page-item disabled">
+                    <a class="page-link">Previous</a>
+                  </li>
+                  <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                  <li class="page-item" aria-current="page">
+                    <a class="page-link" href="#">2</a>
+                  </li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item">
+                    <a class="page-link" href="#">Next</a>
+                  </li>
+                </ul>
+              </nav>
+            
         </div>
       </section>
 
@@ -450,8 +425,6 @@
         </div>
     </footer>
     
-    
-
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" 
     integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" 
     crossorigin="anonymous"></script>
